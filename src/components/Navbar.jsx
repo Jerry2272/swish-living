@@ -7,8 +7,9 @@ const Navbar = () => {
 const navLink = [
     {id: 1, links: '/', navText: 'Home'},
     {id: 2, links: '/shop', navText: 'Shop'},
-    {id: 3, links: '/cart', navText: 'Cart'},
+    {id: 3, links: '/gallery', navText: 'Gallery'},
     {id: 4, links: '/cart', navText: 'Cart'},
+    {id: 5, links: '/cart', navText: 'Cart'},
 ]
   return (
     <nav className='shadow bg-white flex justify-between items-center md:px-[8em] py-2'>

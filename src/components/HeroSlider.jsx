@@ -25,7 +25,7 @@ const HeroSlider = () => {
               aria-label={slide.title}
               className="h-screen flex items-center px-4 md:px-24 bg-cover bg-center"
               style={{
-                backgroundImage: `linear-gradient(90deg, rgba(213, 191, 167, 1) 10%, rgba(0, 0, 0, 0.40) 100%), url(${slide.img})`,
+                backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0.80) 10%, rgba(213, 191, 167, 1) 100%), url(${slide.img})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}
