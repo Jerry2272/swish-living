@@ -25,7 +25,7 @@ const HeroSlider = () => {
               aria-label={slide.title}
               className="h-screen flex items-center px-4 md:px-24 bg-cover bg-center"
               style={{
-                backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0.80) 10%, rgba(213, 191, 167, 1) 100%), url(${slide.img})`,
+                backgroundImage: `linear-gradient(90deg, rgba(0, 0, 0, 0.80) 10%, rgba(213, 191, 167, 0.70) 100%), url(${slide.img})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
               }}
@@ -37,7 +37,7 @@ const HeroSlider = () => {
                   href="https://api.whatsapp.com/send?phone=%2B2349110586300"
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-3 bg-gradient-to-r from-[#d5bfa7] to-[#000000]
+                  className="inline-flex items-center gap-3 rounded-lg bg-gradient-to-r from-[#d5bfa7] to-[#000000]
 )
  text-white px-6 py-3 font-medium shadow-md hover:shadow-lg transition"
                 >
