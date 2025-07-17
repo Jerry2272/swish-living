@@ -1,13 +1,14 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../redux/cartSlice';
+import { toast } from 'react-toastify';
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
   
   const handleaddTocart = () =>{
       dispatch(addToCart(product))
-      alert(`${product.name} has been added to your cart!`); // Optional: Alert user on adding to cart
+      toast.success(`${product.name} has been added to your cart!`)
   }
   return (
     <div className="bg-white text-black p-4 shadow-xl rounded-xl w-full  transform hover:scale-105 transition duration-300">
