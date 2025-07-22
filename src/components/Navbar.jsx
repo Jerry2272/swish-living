@@ -8,7 +8,7 @@ const navLink = [
     {id: 1, links: '/', navText: 'Home'},
     {id: 2, links: '/shop', navText: 'Shop'},
     {id: 3, links: '/gallery', navText: 'Gallery'},
-    {id: 4, links: '/cart', navText: 'Cart'},
+    {id: 4, links: '/product', navText: 'Product'},
     {id: 5, links: '/cart', navText: 'Cart'},
 ]
   return (
