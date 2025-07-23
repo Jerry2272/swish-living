@@ -3,7 +3,7 @@ import relatedImg2 from '../assets/item-1.jpg';
 import relatedImg3 from '../assets/item-1.jpg';
 import relatedImg4 from '../assets/item-1.jpg';
 
-export const relatedProducts = [
+export const newArrival = [
   {
     id: 17,
     name: "Modern Bookshelf",

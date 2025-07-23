@@ -1,48 +1,80 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { addToCart , removeFromCart} from '../redux/cartSlice';
+import { addToCart, removeFromCart } from '../redux/cartSlice';
 import { toast } from 'react-toastify';
-import {useNavigate , Link} from 'react-router-dom'
+import { useNavigate  } from 'react-router-dom';
+import { FaWhatsapp, FaStar } from 'react-icons/fa';
 
 const ProductCard = ({ product }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  
-  const handleaddTocart = () =>{
-      dispatch(addToCart(product))
-      toast.success(`${product.name} has been added to your cart!`)
-  }
-  const removeCart = () => {
-    dispatch(removeFromCart(product));
-    toast.error(`${product.name} has been removed from your cart!`);
+
+  const handleAddToCart = () => {
+    dispatch(addToCart(product));
+    toast.success(`${product.name} added to cart!`);
   };
+
+  const handleRemoveFromCart = () => {
+    dispatch(removeFromCart(product));
+    toast.error(`${product.name} removed from cart!`);
+  };
+
+
   return (
-    <div className="bg-white text-black p-4 shadow-xl rounded-xl w-full  transform hover:scale-105 transition duration-300">
-      <img
-        src={product.img}
-        alt={product.name}
-        className="w-full h-48 object-cover rounded-md"
-        style={{ cursor: 'pointer' }}
+    <div className="bg-white rounded-1xl shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col mx-1">
+      <div
+        className="cursor-pointer"
         onClick={() => navigate(`/product/${product.id}`)}
-      />
-
-      <h2 className="mt-4 font-semibold text-xl">{product.name}</h2>
-      <span className="text-yellow-500">{product.star}</span>
-
-      <div className="mt-2">
-        <h6 className="text-lg font-bold">₦{product.price}</h6>
-        <button className="mt-2 bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition" 
-        style={{cursor: 'pointer'}}
-        onClick={handleaddTocart} 
-        >
-          {product.addCart}
-        </button>
-        <button onClick={removeCart}>Remove Cart</button>
+      >
+        <img
+          src={product.img}
+          alt={product.name}
+          className="w-full h-56 object-cover"
+        />
       </div>
-      <Link to={`https://wa.me/?text=Hello%20Jerry!%20Check%20out% ${window.location.href}`} target="_blank" className="text-blue-500 hover:underline mt-2 block">
-      Share on WhatsApp
-      </Link>
 
+      <div className="p-4 flex flex-col flex-1 justify-between">
+        <h3 className="text-xl font-semibold text-gray-900 mb-1 line-clamp-2">
+          {product.name}
+        </h3>
+
+        {product.star && (
+          <div className="text-yellow-500 flex items-center gap-1 text-sm mb-1">
+            <FaStar /> <span>{product.star}</span>
+          </div>
+        )}
+
+        <p className="text-lg font-bold text-green-700 mt-2">
+          ₦{product.price || '—'}
+        </p>
+
+        <div className="mt-4 flex flex-col gap-2">
+          <button
+            className="bg-black text-white py-2 rounded-md hover:bg-gray-800 transition"
+            onClick={handleAddToCart}
+          >
+            {product.addCart || 'Add to Cart'}
+          </button>
+
+          <button
+            className="border border-red-500 text-red-500 py-2 rounded-md hover:bg-red-50 transition"
+            onClick={handleRemoveFromCart}
+          >
+            {product.removeCart || 'Remove'}
+          </button> 
+         <a
+  className="flex justify-center items-center gap-2 text-green-600 text-sm mt-2 hover:underline"
+  href={`https://wa.me/?text=${encodeURIComponent(
+    `Hello! Check out this product: ${product.name} - ${window.location.href}`
+  )}`}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+            <FaWhatsapp />
+            Share on WhatsApp
+          </a>
+        </div>
+      </div>
     </div>
   );
 };

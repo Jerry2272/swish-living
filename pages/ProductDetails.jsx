@@ -24,7 +24,7 @@ const product = allProducts.find(p => p.id === parseInt(id));
         <h1 className="text-3xl font-bold mb-2">{product.name}</h1>
 
       <p className="text-sm text-gray-500 mb-1 capitalize">Category: {product.category || "Uncategorized"}</p>
-      <p className="text-xl font-semibold text-green-700 mb-1">₦{product.price?.toLocaleString("en-NG", { style: "currency", currency: "NGN" })}</p>
+      <p className="text-xl font-semibold text-green-700 mb-1">{product.price?.toLocaleString("en-NG", { style: "currency", currency: "NGN" })}</p>
       {product.discount && (
         <p className="text-red-500 font-medium mb-1">Discount: {product.discount}% off</p>
       )}

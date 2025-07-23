@@ -6,6 +6,10 @@ import CartDisplay from '../pages/CartDisplay'
 import { useSelector } from 'react-redux'
 import Product from '../pages/Product'
 import ProductDetails from '../pages/ProductDetails'
+import Notfound from '../pages/Notfound'
+import Gallery from '../pages/Gallery'
+import Gallerydetails from '../pages/Gallerydetails'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -24,9 +28,13 @@ function App() {
     <Routes>
         <Route path='/' element={<Home /> } />
         <Route path='/cart' element={<CartDisplay />} />
+        <Route path='/gallery' element={<Gallery />}   />
+        <Route path='/gallery/:id' element={<Gallerydetails />}   />
          <Route path='/product' element={<Product />} />
         <Route path='/product/:id' element={<ProductDetails />} />
+        <Route path='*' element={<Notfound/>} />
     </Routes>
+    <Footer />
     </>
   )
 }
