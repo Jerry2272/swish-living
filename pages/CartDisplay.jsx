@@ -48,6 +48,7 @@ const CartDisplay = () => {
             <p className="text-md font-medium text-gray-600">🧾 Total Items: <span className="font-bold">{totalQuantity}</span></p>
             <p className="text-xl font-bold text-green-600">💰 Total Amount: ₦{totalAmount}</p>
           </div>
+          <button className='cursor-pointer'>Payout</button>
         </div>
       )}
     </div>
