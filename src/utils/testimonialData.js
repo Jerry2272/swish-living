@@ -1,6 +1,6 @@
 import testimonial1 from '../assets/Testimonial-pic1.jpg'
 import testimonial2 from '../assets/Testimonial-pic3.jpg'
-import testimonial3 from '../assets/Testimonial-pic2.jpg'
+import testimonial3 from '../assets/ibeleme.jpg'
 
 
 export const testimonial =[

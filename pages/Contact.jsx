@@ -27,11 +27,11 @@ const Contact = () => {
             </div>
             <div>
               <p className="font-semibold">📞 Phone:</p>
-              <p>+234 810 000 0000</p>
+              <p>+234 810 048 9780</p>
             </div>
             <div>
               <p className="font-semibold">📧 Email:</p>
-              <p>contact@swishbedding.com</p>
+              <p>swishbeddings@gmail.com</p>
             </div>
           </div>
 

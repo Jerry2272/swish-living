@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid md:grid-cols-4 sm:grid-cols-2 gap-10">
         {/* Logo and Description */}
         <div>
-          <h2 className="text-2xl font-bold mb-4">Swish Bedding</h2>
+          <h2 className="text-2xl font-bold mb-4">Swish Living</h2>
           <p className="text-sm text-gray-300">
             We bring elegance and comfort to your home with quality bedding, interior decor, and fast delivery services.
           </p>
@@ -30,11 +30,11 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-4">Contact</h3>
           <ul className="space-y-3 text-sm text-gray-300">
             <li className="flex items-center gap-2">
-              <FaPhoneAlt /> <span>+234 800 000 0000</span>
+              <FaPhoneAlt /> <span>+234 810 048 9780</span>
             </li>
             <li className="flex items-center gap-2">
-              <FaEnvelope /> <span>info@swishbedding.com</span>
-            </li>
+              <FaEnvelope /> <span>swishbeddings@gmail.com</span>
+            </li> 
           </ul>
         </div>
 
@@ -51,7 +51,7 @@ const Footer = () => {
 
       {/* Bottom line */}
       <div className="text-center text-sm text-gray-500 mt-10 border-t border-gray-700 pt-4">
-        &copy; {new Date().getFullYear()} Swish Bedding. All rights reserved.
+        &copy; {new Date().getFullYear()} Swish Living. All rights reserved.
       </div>
     </footer>
   );
