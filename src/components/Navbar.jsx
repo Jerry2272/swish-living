@@ -6,10 +6,13 @@ import logo from '../assets/swish-logo.png'
 const Navbar = () => {
 const navLink = [
     {id: 1, links: '/', navText: 'Home'},
-    {id: 2, links: '/shop', navText: 'Shop'},
-    {id: 3, links: '/gallery', navText: 'Gallery'},
-    {id: 4, links: '/product', navText: 'Product'},
-    {id: 5, links: '/cart', navText: 'Cart'},
+    {id: 2, links: '/about', navText: 'About'},
+    {id: 3, links: '/shop', navText: 'Shop'},
+    {id: 4, links: '/gallery', navText: 'Gallery'},
+    {id: 5, links: '/product', navText: 'Product'},
+    {id: 6, links: '/cart', navText: 'Cart'},
+    {id: 6, links: '/contact', navText: 'Contact'},
+
 ]
   return (
     <nav className='shadow bg-white flex justify-between items-center md:px-[8em] py-2'>

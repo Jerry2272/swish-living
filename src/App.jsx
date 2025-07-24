@@ -10,6 +10,8 @@ import Notfound from '../pages/Notfound'
 import Gallery from '../pages/Gallery'
 import Gallerydetails from '../pages/Gallerydetails'
 import Footer from './components/Footer'
+import About from '../pages/About'
+import Contact from '../pages/Contact'
 
 function App() {
 
@@ -27,6 +29,8 @@ function App() {
     <Navbar />
     <Routes>
         <Route path='/' element={<Home /> } />
+        <Route path='/about' element={<About />} />
+        <Route path='/contact' element={<Contact />} />
         <Route path='/cart' element={<CartDisplay />} />
         <Route path='/gallery' element={<Gallery />}   />
         <Route path='/gallery/:id' element={<Gallerydetails />}   />

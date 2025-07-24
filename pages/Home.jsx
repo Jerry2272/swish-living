@@ -4,9 +4,9 @@ import Wrapper from '../src/components/Wrapper'
 import Section from '../src/components/Section'
 import { productItem } from '../src/utils/bestsellingData'
 import { newArrival } from '../src/utils/newArrival'
-import Special from '../src/components/Special'
-import About from '../src/components/About'
+import Special from '../src/components/Special' 
 import Explore from '../src/components/Explore'
+import TestimonialCard from '../src/components/TestimonialCard'
 
 const Home = () => {
   return (
@@ -26,6 +26,7 @@ const Home = () => {
         productItem={newArrival}
       />
       <Special /> 
+      <TestimonialCard />
       <Explore />
     </section>
   )

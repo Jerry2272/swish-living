@@ -10,6 +10,15 @@ import gallery9 from  '../assets/bedlings1.jpg'
 import gallery10 from  '../assets/wall1.jpg'
 import gallery11 from  '../assets/bedlings2.jpg'
 import gallery12 from  '../assets/wall7.jpg'
+import gallery13 from  '../assets/interiorDesign.jpg'
+import gallery14 from  '../assets/curtian1.jpg'
+import gallery15 from  '../assets/wall.jpg'
+import gallery16 from  '../assets/wall8.jpg'
+import gallery17 from  '../assets/tv-stand1.jpg'
+import gallery18 from  '../assets/tv-stand2.jpg'
+import gallery19 from  '../assets/curtian2.jpg'
+import gallery20 from  '../assets/curtain5.jpg'
+import gallery21 from  '../assets/window-blind.jpg'
 
 export const galleryProduct = [
   {
@@ -118,6 +127,87 @@ export const galleryProduct = [
     name: 'Home Wallpaper',
     price: '₦14,500',
     category: 'Wallpaper',
+    description: 'Textured wallpaper with premium finish.',
+  },
+  {
+    id: 13,
+    img: gallery13,
+    alt: 'Interior Design',
+    name: 'Interior Design',
+    price: '₦14,500',
+    category: 'Interior Design',
+    description: 'Textured wallpaper with premium finish.',
+  },
+  {
+    id: 14,
+    img: gallery14,
+    alt: 'Curtain',
+    name: 'Curtain',
+    price: '₦14,500',
+    category: 'Curtain',
+    description: 'Textured wallpaper with premium finish.',
+  },
+  {
+    id: 15,
+    img: gallery15,
+    alt: 'Curtain',
+    name: 'Curtain',
+    price: '₦14,500',
+    category: 'Curtain',
+    description: 'Textured wallpaper with premium finish.',
+  },
+  {
+    id: 16,
+    img: gallery16,
+    alt: 'Wall',
+    name: 'Wallpaper Design',
+    price: '₦14,500',
+    category: 'Wallpaper Design',
+    description: 'Textured wallpaper with premium finish.',
+  },
+  {
+    id: 17,
+    img: gallery17,
+    alt: 'Tv Stand',
+    name: 'Wallpaper Design',
+    price: '₦14,500',
+    category: 'Tv Standing',
+    description: 'Textured wallpaper with premium finish.',
+  },
+  {
+    id: 18,
+    img: gallery18,
+    alt: 'Tv Stand',
+    name: 'Wallpaper Design',
+    price: '₦14,500',
+    category: 'Tv Standing',
+    description: 'Textured wallpaper with premium finish.',
+  },
+  {
+    id: 19,
+    img: gallery19,
+    alt: 'Curtain Design',
+    name: 'Curtain Design',
+    price: '₦14,500',
+    category: 'Curtain Design',
+    description: 'Textured wallpaper with premium finish.',
+  },
+  {
+    id: 20,
+    img: gallery20,
+    alt: 'Curtain Design',
+    name: 'Curtain Design',
+    price: '₦14,500',
+    category: 'Curtain Design',
+    description: 'Textured wallpaper with premium finish.',
+  },
+  {
+    id: 21,
+    img: gallery21,
+    alt: 'Window Blind Design',
+    name: 'Window Blind Design',
+    price: '₦14,500',
+    category: 'Window Blind Design',
     description: 'Textured wallpaper with premium finish.',
   },
 ];

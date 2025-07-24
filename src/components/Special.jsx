@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const SpecialBanner = () => {
   return (
-    <section className="bg-black py-12 px-6 md:px-16 text-center mx-auto my-[40px]">
+    <section className="bg-black py-12 px-6 md:px-16 text-center mx-auto mt-[40px]">
       <div className="max-w-4xl mx-auto">
         {/* Text Section */}
         <div>
