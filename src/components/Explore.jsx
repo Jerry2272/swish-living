@@ -43,7 +43,7 @@ const Explore = () => {
         </ul>
         <a
           href="/gallery"
-          className="inline-flex items-center gap-3 rounded-lg bg-gradient-to-r from-[#d5bfa7] to-[#000000]
+          className="inline-flex items-center gap-3 rounded-lg bg-[#7e563c] 
 )
  text-white px-6 py-3 font-medium shadow-md hover:shadow-lg transition"
         >
