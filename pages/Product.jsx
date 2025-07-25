@@ -1,8 +1,8 @@
 import React from "react";
 import { productItem } from "../src/utils/bestsellingData";
 import { relatedProducts } from "../src/utils/relatedProducts";
-import ProductCard from "../src/components/ProductCard";
-import { featuredProduct } from "../src/utils/Featuredproducts";
+import ProductCard from "../src/components/ProductCard"; 
+import { featuredProductdata } from "../src/utils/featuredProductdata";
 
 const Product = () => {
   return (
@@ -29,7 +29,7 @@ const Product = () => {
       <section>
         <h3 className="text-xl font-semibold mb-6 text-gray-700">Featured Products</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {featuredProduct.map((featured) => (
+          {featuredProductdata.map((featured) => (
             <ProductCard key={featured.id} product={featured} />
           ))}
         </div>

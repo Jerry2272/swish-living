@@ -7,7 +7,7 @@ import slide4 from '../assets/slider4.jpg';
 export const slideData = [
     {
         img: slide1,
-        title: 'Welcome to SwishLivings',
+        title: 'Welcome to SwishLiving',
         description: 'Discover the best in home decor and bedding. Transform your space with our exclusive collections.',
     },
     {

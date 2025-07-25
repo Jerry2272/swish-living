@@ -6,8 +6,8 @@ import { productItem } from '../src/utils/bestsellingData'
 import { newArrival } from '../src/utils/newArrival'
 import Special from '../src/components/Special' 
 import Explore from '../src/components/Explore'
-import TestimonialCard from '../src/components/TestimonialCard'
-import { featuredProduct } from '../src/utils/Featuredproducts'
+import TestimonialCard from '../src/components/TestimonialCard' 
+import { featuredProductdata } from '../src/utils/featuredProductdata'
 
 const Home = () => {
   return (
@@ -18,7 +18,7 @@ const Home = () => {
           title="Featured Products"
           bgColor={'black'}
           color={'white'}
-          productItem={featuredProduct}
+          productItem={featuredProductdata}
       />
       <Section 
           title="Best Selling Products"

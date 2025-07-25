@@ -10,7 +10,7 @@ import product9 from '../assets/duvet4.jpg'
 import product10 from '../assets/bedsheet-product13.jpg'
 
 
-export const featuredProduct = [
+export const featuredProductdata = [
     {
       id: 101,
       name: "Bedsheet",
