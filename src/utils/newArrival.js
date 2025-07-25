@@ -1,15 +1,17 @@
-import relatedImg1 from '../assets/item-1.jpg';
-import relatedImg2 from '../assets/item-1.jpg';
-import relatedImg3 from '../assets/item-1.jpg';
-import relatedImg4 from '../assets/item-1.jpg';
+import newArrival1 from '../assets/bedsheet-product.jpg';
+import newArrival2 from '../assets/duvet.jpg';
+import newArrival3 from '../assets/bedsheet-product2.jpg';
+import newArrival4 from '../assets/duvet3.jpg';
+import newArrival5 from '../assets/bedsheet-product14.jpg';
+import newArrival6 from '../assets/bedsheet-product10.jpg';
 
 export const newArrival = [
   {
     id: 17,
-    name: "Modern Bookshelf",
+    name: "Bedsheet",
     price: "95000",
     star: "⭐⭐⭐⭐⭐",
-    img: relatedImg1,
+    img: newArrival1,
     addCart: "Add to Cart",
     quantity: 1,
     discount: 15,
@@ -23,10 +25,10 @@ export const newArrival = [
   },
   {
     id: 102,
-    name: "Minimalist Center Table",
+    name: "foreign dovet",
     price: "62000",
     star: "⭐⭐⭐⭐",
-    img: relatedImg2,
+    img: newArrival2,
     addCart: "Add to Cart",
     quantity: 1,
     description:
@@ -35,10 +37,10 @@ export const newArrival = [
   },
   {
     id: 103,
-    name: "Premium Office Chair",
+    name: "Bedsheet",
     price: "180000",
     star: "⭐⭐⭐⭐⭐",
-    img: relatedImg3,
+    img: newArrival3,
     addCart: "Add to Cart",
     quantity: 1,
     discount: 5,
@@ -48,14 +50,38 @@ export const newArrival = [
   },
   {
     id: 104,
-    name: "Velvet Ottoman",
+    name: "Bedsheet",
     price: "50000",
     star: "⭐⭐⭐⭐",
-    img: relatedImg4,
+    img: newArrival4,
     addCart: "Add to Cart",
     quantity: 1,
     description:
       "Soft velvet ottoman that doubles as seating and storage. A must-have addition to any living space.",
       removeCart: 'Remove Cart'
-  }
+  },
+  {
+    id: 104,
+    name: "Bedsheet",
+    price: "50000",
+    star: "⭐⭐⭐⭐",
+    img: newArrival5,
+    addCart: "Add to Cart",
+    quantity: 1,
+    description:
+      "Soft velvet ottoman that doubles as seating and storage. A must-have addition to any living space.",
+      removeCart: 'Remove Cart'
+  },
+  {
+    id: 104,
+    name: "Bedsheet",
+    price: "50000",
+    star: "⭐⭐⭐⭐",
+    img: newArrival6,
+    addCart: "Add to Cart",
+    quantity: 1,
+    description:
+      "Soft velvet ottoman that doubles as seating and storage. A must-have addition to any living space.",
+      removeCart: 'Remove Cart'
+  },
 ];

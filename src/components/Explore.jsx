@@ -1,11 +1,11 @@
 import React from 'react';
-import tvConsole from '../assets/tv-console1.jpg';
+import tvConsole from '../assets/bedsheet-product2.jpg';
 import curtain1 from '../assets/curtian1.jpg';
 import tvStand from '../assets/tv-stand.jpg';
 
 const Explore = () => {
   return (
-    <section className="grid md:grid-cols-2 gap-10 px-6 py-16 items-center max-w-7xl md:mx-[7em]">
+    <section className="grid md:grid-cols-2 gap-10 px-6 py-16 items-center max-w-7xl md:mx-[5em]">
       {/* Image Section */}
       <div className="grid grid-cols-2 gap-3 mx-4">
         <img

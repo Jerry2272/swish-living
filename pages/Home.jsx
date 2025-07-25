@@ -7,6 +7,7 @@ import { newArrival } from '../src/utils/newArrival'
 import Special from '../src/components/Special' 
 import Explore from '../src/components/Explore'
 import TestimonialCard from '../src/components/TestimonialCard'
+import { featuredProduct } from '../src/utils/Featuredproducts'
 
 const Home = () => {
   return (
@@ -14,13 +15,25 @@ const Home = () => {
       <HeroSlider />
       <Wrapper />
       <Section 
-          title="Best Selling Product"
+          title="Featured Products"
           bgColor={'black'}
           color={'white'}
+          productItem={featuredProduct}
+      />
+      <Section 
+          title="Best Selling Products"
+          bgColor={'white'}
+          color={'black'}
           productItem={productItem}
       />
       <Section
         title="New Arrival Product"
+        bgColor={'black'}
+        color={'white'}
+        productItem={newArrival}
+      />
+      <Section
+        title="Limited Stock"
         bgColor={'white'}
         color={'black'}
         productItem={newArrival}

@@ -39,6 +39,9 @@ const ProductCard = ({ product }) => {
         <h3 className="text-lg font-bold text-gray-800 line-clamp-2 mb-2">
           {product.name}
         </h3>
+        <span className="absolute top-12 left-2 bg-white text-gray-800 text-xs font-medium px-2 py-0.5 rounded shadow">
+  Qty: {product.quantity}
+</span>
 
         {product.star && (
           <div className="flex items-center text-yellow-500 text-sm mb-3">

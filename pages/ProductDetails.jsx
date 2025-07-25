@@ -3,10 +3,11 @@ import { useParams, Link } from 'react-router-dom';
 import { productItem } from '../src/utils/bestsellingData';
 import { relatedProducts } from '../src/utils/relatedProducts';
 import ProductCard from '../src/components/ProductCard';
+import { featuredProduct } from '../src/utils/Featuredproducts';
 
 const ProductDetails = () => {
   const { id } = useParams();
-  const allProducts = [...productItem, ...relatedProducts];
+  const allProducts = [...productItem, ...relatedProducts, ...featuredProduct];
   const product = allProducts.find(p => p.id === parseInt(id));
 
   if (!product) {

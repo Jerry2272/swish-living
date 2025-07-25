@@ -1,9 +1,14 @@
-import bestImg1 from '../assets/item-1.jpg';
+import bestImg1 from '../assets/duvet3.jpg';
+import bestImg2 from '../assets/duvet.jpg';
+import bestImg3 from '../assets/duvet4.jpg';
+import bestImg4 from '../assets/duvet5.jpg';
+import bestImg5 from '../assets/duvet2.jpg';
+import bestImg6 from '../assets/duvet1.jpg';
 
 export const productItem = [
   {
     id: 1,
-    name: "Elegant Sofa",
+    name: "Duvet",
     price: "120000",
     star: "⭐⭐⭐⭐",
     img: bestImg1,
@@ -21,10 +26,10 @@ export const productItem = [
 
   {
     id: 2,
-    name: "Classic Lamp",
+    name: "Duvet",
     price: "1500000",
     star: "⭐⭐⭐⭐",
-    img: bestImg1,
+    img: bestImg2,
     addCart: "Add to Cart",
     quantity: 1,
     description:
@@ -33,28 +38,54 @@ export const productItem = [
   },
   {
     id: 3,
-    name: "Luxury Sofa",
+    name: "Duvet",
     price: "120000",
     star: "⭐⭐⭐⭐",
-    img: bestImg1,
+    img: bestImg3,
     addCart: "Add to Cart",
     quantity: 1,
     description:
       "Sink into the soft cushions of the Luxury Sofa, made with high-quality materials and elegant design to transform any room.",
       removeCart: 'Remove Cart'
   },
-  // {
-  //   id: 17,
-  //   name: "Jakes",
-  //   price: "15000",
-  //   star: "⭐⭐⭐⭐",
-  //   img: bestImg1,
-  //   addCart: "Add to Cart",
-  //   quantity: 1,
-  //   description:
-  //     "Brighten your nights with this Classic Lamp. Its warm glow and minimalist design make it a perfect bedside companion.",
-  //     removeCart: 'Remove Cart'
-  // }
+ 
+  {
+    id: 4,
+    name: "Duvet",
+    price: "120000",
+    star: "⭐⭐⭐⭐",
+    img: bestImg4,
+    addCart: "Add to Cart",
+    quantity: 1,
+    description:
+      "Sink into the soft cushions of the Luxury Sofa, made with high-quality materials and elegant design to transform any room.",
+      removeCart: 'Remove Cart'
+  },
+  {
+    id: 5,
+    name: "Duvet",
+    price: "120000",
+    star: "⭐⭐⭐⭐",
+    img: bestImg5,
+    addCart: "Add to Cart",
+    quantity: 1,
+    description:
+      "Sink into the soft cushions of the Luxury Sofa, made with high-quality materials and elegant design to transform any room.",
+      removeCart: 'Remove Cart'
+  },
+  {
+    id: 6,
+    name: "Duvet",
+    price: "120000",
+    star: "⭐⭐⭐⭐",
+    img: bestImg6,
+    addCart: "Add to Cart",
+    quantity: 1,
+    description:
+      "Sink into the soft cushions of the Luxury Sofa, made with high-quality materials and elegant design to transform any room.",
+      removeCart: 'Remove Cart'
+  },
+ 
 ];
 
 
