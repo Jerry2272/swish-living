@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { productItem } from '../src/utils/bestsellingData';
 import { relatedProducts } from '../src/utils/relatedProducts';
 import ProductCard from '../src/components/ProductCard';
-import { featuredProduct } from '../src/utils/Featuredproducts';
+import { featuredProduct } from '../src/utils/featuredproduct';
 
 const ProductDetails = () => {
   const { id } = useParams();
