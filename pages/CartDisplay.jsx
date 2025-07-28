@@ -38,7 +38,7 @@ const CartDisplay = () => {
                 </div>
                 <button
                   onClick={() => removeCartItem(item)}
-                  className="text-red-500 hover:underline text-sm font-medium"
+                  className="text-red-500 hover:underline text-sm font-medium cursor-pointer"
                 >
                   Remove
                 </button>
@@ -57,7 +57,7 @@ const CartDisplay = () => {
 
           <div className="text-center">
             <button
-              className="bg-[#63412b] hover:bg-[#6d5e54] text-white font-semibold py-2 px-6 rounded-lg shadow-md transition"
+              className="bg-[#63412b] hover:bg-[#6d5e54] text-white font-semibold py-2 px-6 rounded-lg shadow-md transition cursor-pointer"
             >
               Proceed to Checkout
             </button>

@@ -4,13 +4,20 @@ import { productItem } from '../src/utils/bestsellingData';
 import { relatedProducts } from '../src/utils/relatedProducts';
 import ProductCard from '../src/components/ProductCard'; 
 import { featuredProductdata } from '../src/utils/featuredProductdata';
+import { addToCart } from '../src/redux/cartSlice';
+import { useDispatch } from 'react-redux';
 
-const ProductDetails = () => {
+const ProductDetails = ({product}) => {
+  const dispatch = useDispatch();
   const { id } = useParams();
   const allProducts = [...productItem, ...relatedProducts, ...featuredProductdata];
-  const product = allProducts.find(p => p.id === parseInt(id));
+  const prod = allProducts.find(p => p.id === parseInt(id));
 
-  if (!product) {
+  const addtoCart = () => {
+    dispatch(addToCart(product));
+  } 
+
+  if (!prod) {
     return (
       <div className="p-6 text-center text-gray-500">
         <h2 className="text-xl font-semibold">❌ Product not found</h2>
@@ -29,27 +36,27 @@ const ProductDetails = () => {
       <div className="p-6 max-w-6xl mx-auto bg-white shadow-md rounded-xl grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Image */}
         <img
-          src={product.img || product.imgUrl}
-          alt={product.name}
+          src={prod.img || prod.imgUrl}
+          alt={prod.name}
           className="w-full rounded-xl object-cover shadow"
         />
 
         {/* Details */}
         <div className="space-y-4">
-          <h1 className="text-3xl font-bold text-gray-800">{product.name}</h1>
-          <p className="text-sm text-gray-500 capitalize">Category: {product.category || "Uncategorized"}</p>
+          <h1 className="text-3xl font-bold text-gray-800">{prod.name}</h1>
+          <p className="text-sm text-gray-500 capitalize">Category: {prod.category || "Uncategorized"}</p>
           <p className="text-xl font-semibold text-black">
-            {product.price?.toLocaleString("en-NG", { style: "currency", currency: "NGN" })}
+            {prod.price?.toLocaleString("en-NG", { style: "currency", currency: "NGN" })}
           </p>
-          {product.discount && (
-            <p className="text-red-500 font-medium">Discount: {product.discount}% off</p>
+          {prod.discount && (
+            <p className="text-red-500 font-medium">Discount: {prod.discount}% off</p>
           )}
-          <p className="text-yellow-600">⭐ Average Rating: {product.avgRating}</p>
-          <p className="text-gray-700">{product.shortDesc}</p>
+          <p className="text-yellow-600">⭐ Average Rating: {prod.avgRating}</p>
+          <p className="text-gray-700">{prod.shortDesc}</p>
 
           <div>
             <h3 className="font-bold mb-1">Description:</h3>
-            <p className="text-gray-600">{product.description}</p>
+            <p className="text-gray-600">{prod.description}</p>
           </div>
 
           <Link
@@ -60,15 +67,16 @@ const ProductDetails = () => {
           >
             📲 Share on WhatsApp
           </Link>
+          <button onClick={addtoCart}>Add to Cart</button>
         </div>
       </div>
 
       {/* Customer Reviews */}
-      {product.reviews && (
+      {prod.reviews && (
         <div className="max-w-6xl mx-auto p-6 mt-4 bg-white rounded-xl shadow">
           <h3 className="text-xl font-bold mb-4">Customer Reviews</h3>
           <ul className="space-y-3">
-            {product.reviews.map((review, idx) => (
+            {prod.reviews.map((review, idx) => (
               <li key={idx} className="border rounded-md p-3 bg-gray-50">
                 <p className="text-sm text-yellow-600">⭐ {review.rating}</p>
                 <p className="text-sm text-gray-600 italic">"{review.text}"</p>

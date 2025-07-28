@@ -22,7 +22,7 @@ function App() {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
     localStorage.setItem('cartTotalAmount', totalAmount);
     localStorage.setItem('totalCartQuantity', totalCartQuantity);
-  }, [cartItems, totalAmount, totalCartQuantity])
+  }, [cartItems, totalAmount, totalCartQuantity]);
 
   return (
     <>

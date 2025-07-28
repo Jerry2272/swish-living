@@ -5,7 +5,7 @@ import { FaCartPlus } from 'react-icons/fa'
 import { MdMenu, MdClose } from 'react-icons/md'
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const navLink = [
     { id: 1, links: '/', navText: 'Home' },
@@ -14,7 +14,7 @@ const Navbar = () => {
     { id: 4, links: '/gallery', navText: 'Gallery' },
     { id: 5, links: '/product', navText: 'Product' },
     { id: 6, links: '/cart', navText: <FaCartPlus /> },
-    { id: 7, links: '/contact', navText: 'Contact' },
+    { id: 7, links: '/contact', navText: 'Contact'},
   ]
 
   return (
