@@ -4,28 +4,30 @@ import { addToCart, removeFromCart } from '../redux/cartSlice';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 import { FaCartPlus, FaTrashAlt, FaWhatsapp } from 'react-icons/fa';
-
-const selectColor = [
-  { id: 1, text: 'Red' },
-  { id: 2, text: 'Black' },
-  { id: 3, text: 'Green' }
-];
+import { productItem } from '../utils/bestsellingData';
 
 const selectSize = [
-  { id: 1, text: '3/6', price: 500 },
-  { id: 2, text: '4/6', price: 3000 },
-  { id: 3, text: '6/6', price: 3500 },
-  { id: 4, text: '6/7', price: 4000 },
-  { id: 5, text: '7/7', price: 4500 },
-  { id: 6, text: '8/8', price: 5000 },
+  ...new Set(
+    productItem.flatMap(m =>
+      m.selectSize ? m.selectSize.map(size => size.text) : []
+    )
+  )
+];
+
+const allColors = [
+  ...new Set(productItem.flatMap(item =>
+    item.selectColor.map(color => color.text)
+  ))
 ];
 
 const ProductCard = ({ product }) => {
   const [cartAdded, setCartAdded] = useState(0);
   const [modal, showModal] = useState(false);
   const [colorSelected, setSelectedColor] = useState('');
-  const [sizeSelected, setSelectedSize] = useState('');
-  const [priceUpdated, setPriceupdated] = useState(product.price);
+  const [sizeSelected, setSelectedSize] = useState(''); 
+
+  const selectedSizeData = product.selectSize?.find(size => size.text === sizeSelected);
+  const priceUpdated = selectedSizeData?.price || product.price;
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -39,7 +41,7 @@ const ProductCard = ({ product }) => {
   ...product,
   color: colorSelected,
   size: sizeSelected,
-  price: priceUpdated, // ✅ add this line
+  price: priceUpdated,  
 };
 
 
@@ -131,36 +133,31 @@ const ProductCard = ({ product }) => {
             <h3 className="text-lg font-bold mb-4 text-center">Select Options</h3>
 
             <div className="mb-4">
-              <label className="block mb-1 text-sm font-medium">Color:</label>
-              <select
-                value={colorSelected}
+              <label className="block mb-1 text-sm font-medium">Color:</label> 
+              
+<select value={colorSelected}
                 onChange={(e) => setSelectedColor(e.target.value)}
-                className="w-full p-2 border rounded"
-              >
-                <option value="">-- Choose Color --</option>
-                {selectColor.map((item) => (
-                  <option value={item.text} key={item.id}>
-                    {item.text}
-                  </option>
-                ))}
-              </select>
+                 className="w-full p-2 border rounded">
+                   <option value="">-- Choose Color --</option>
+  {allColors.map((color, index) => (
+    <option key={index} value={color}>{color}</option>
+  ))}
+</select>
             </div>
 
             <div className="mb-4">
               <label className="block mb-1 text-sm font-medium">Size:</label>
              <select
   value={sizeSelected}
-  onChange={(e) => {
-    const selected = selectSize.find((item) => item.text === e.target.value);
-    setSelectedSize(selected.text);
-    setPriceupdated(selected.price);
+  onChange={(e) => { 
+    setSelectedSize(e.target.value); 
   }}
   className="w-full p-2 border rounded"
 >
   <option value="">-- Choose Size --</option>
-  {selectSize.map((item) => (
-    <option value={item.text} key={item.id}>
-      {item.text}
+  {selectSize.map((size, index) => (
+    <option value={size} key={index}>
+      {size}
     </option>
   ))}
 </select>

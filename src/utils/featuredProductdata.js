@@ -26,7 +26,7 @@ export const featuredProductdata = [
     {
       id: 202,
       name: "Duvet",
-      price: "10000",
+      price: "150000",
       star: "⭐⭐⭐⭐",
       img: product2,
       addCart: "Add to Cart",
