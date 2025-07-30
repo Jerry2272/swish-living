@@ -20,7 +20,7 @@ const CartDisplay = () => {
 
       {cartItems.length === 0 ? (
         <p className="text-center text-gray-500 text-lg">
-          🛍️ Your cart is currently empty.
+          🛍️ Your cart is currently empty.Jerry Jakes
         </p>
       ) : (
         <div className="space-y-6">
