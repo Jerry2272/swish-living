@@ -5,24 +5,24 @@ export const serviceData = [
     id: 1,
     icon: '',
     title: 'Beddings',
-    descripture: 'Beddings involves anything that concerns beds, pillows and dovets e.t.c'
+    descripture: 'Bedsheet, Duvet covers, Duvets, Pillows, Bathrobes, Floor mats, Body and Bath essentials.'
 },
      {
     id: 2,
     icon: '',
     title: 'Interior Decorations',
-    descripture: 'This involves painting, furnitures, curtains, window blind, kitchen utenses. e.t.c'
+    descripture: 'Interior Design, Furnishings and Finishings, Curtains, Blinds, Tv units, Pop Installations, Painting and Lighting.'
 },
      {
     id: 3,
     icon: '',
     title: 'Fast Delivering',
-    descripture: 'We deliver goods and services and at a fast pace both to homes, offices, e.t.c. '
+    descripture: 'Enjoy swift delivery nationwide! We deliver across Nigeria within 1–5 working days. Orders in your city arrive even faster! Sit back, relax.'
 },
      {
     id: 4,
     icon: '',
     title: 'Installation',
-    descripture: 'We install window blinds, curtains, 3d panel, tv consul, e.t.c.'
+    descripture: 'Installation of Curtains, Blinds, Tv Units, Bedframes, 3D Panels. We are available to travel anywhere in Nigeria.'
 }
 ]

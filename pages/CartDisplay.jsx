@@ -14,13 +14,33 @@ const CartDisplay = () => {
     toast.error(`${item.name} has been removed from your cart!`);
   };
 
+  const handlePay = () => {
+    const handler = window.PaystackPop.setup({
+      key: 'pk_live_477ad7ea21e17ea29278a692fbea4b0842b81c11',
+    email: 'jerryjake227@gmail.com', // Replace with dynamic if needed
+    amount: totalAmount * 100, // dynamic amount
+    currency: 'NGN',
+    ref: `${Date.now()}`,
+    callback: (r) => {
+      alert('Payment complete! Reference: ' + r.reference);
+      // optionally clear cart or verify with backend
+    },
+    onClose: () => {
+      alert('Transaction closed.');
+    },
+  });
+
+  handler.openIframe();
+  };
+
+
   return (
     <div className="p-6 max-w-3xl mx-auto bg-white rounded-2xl shadow-md mt-10">
       <h1 className="text-3xl font-bold text-gray-800 mb-6 text-center">🛒 Your Cart</h1>
 
       {cartItems.length === 0 ? (
         <p className="text-center text-gray-500 text-lg">
-          🛍️ Your cart is currently empty.Jerry Jakes
+          🛍️ Your cart is currently empty.
         </p>
       ) : (
         <div className="space-y-6">
@@ -57,6 +77,7 @@ const CartDisplay = () => {
 
           <div className="text-center">
             <button
+            onClick={handlePay}
               className="bg-[#63412b] hover:bg-[#6d5e54] text-white font-semibold py-2 px-6 rounded-lg shadow-md transition cursor-pointer"
             >
               Proceed to Checkout
