@@ -17,7 +17,7 @@ const CartDisplay = () => {
   const handlePay = () => {
     const handler = window.PaystackPop.setup({
       key: 'pk_live_477ad7ea21e17ea29278a692fbea4b0842b81c11',
-    email: 'jerryjake227@gmail.com', // Replace with dynamic if needed
+    email: 'jerryjake227@gmail.com',
     amount: totalAmount * 100, // dynamic amount
     currency: 'NGN',
     ref: `${Date.now()}`,
