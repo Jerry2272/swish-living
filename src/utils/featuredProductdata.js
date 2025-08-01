@@ -21,11 +21,10 @@ export const featuredProductdata = [
   {
     id: 2,
     name: "Feathered Sleeping pillows",
-    price: "₦11,500",
+    price: "11,500",
     star: "⭐⭐⭐⭐",
     img: bestImg2,
-    quantity: 10,
-    description: "Soft and supportive pillows for a restful sleep.",
+    quantity: 10, 
     addCart: "Add to Cart",
     removeCart: 'Remove Cart',
     selectColor: [
@@ -33,26 +32,41 @@ export const featuredProductdata = [
       { text: 'blue' },
       { text: 'black' },
     ],
+    description: "Sink into the soft cushions of the Luxury Sofa, made with high-quality materials and elegant design to transform any room.",
+    reviews: [
+      { rating: 5, text: "Absolutely love this pillow! It's so comfortable and supportive." },
+      { rating: 4, text: "Great quality and design. Perfect for my bedroom." }
+    ]
   },
 
   // 2. Bedsheet
   {
     id: 303,
-    name: "Bedsheet",
-    price: "₦320,000",
+    name: "Onion Pink Duvet set",
+    price: "40000 - ₦50,000",
     star: "⭐⭐⭐⭐",
     img: product3,
-    quantity: 1,
-    description: "Premium quality bedsheet for your comfort.",
+    quantity: 1, 
     addCart: "Add to Cart",
     removeCart: 'Remove Cart',
+    selectSize: [
+      { text: '3/6', price: 40000 },
+      { text: '4/6', price: 43000 },
+      { text: '6/7', price: 45000 },
+      { text: '7/7', price:50000},
+    ],
+    description: "Elegant and soft fabric bedsheet.",
+    reviews: [
+      { rating: 5, text: "This bedsheet is so soft and luxurious!" },
+      { rating: 4, text: "Beautiful design and great quality." }
+    ]
   },
 
   // 3. Duvet
   {
     id: 1,
     name: "White Foreign Duvet",
-    price: "₦28,000 - ₦40,000",
+    price: "28,000 - ₦40,000",
     star: "⭐⭐⭐⭐",
     img: bestImg1,
     quantity: 6,
@@ -90,10 +104,10 @@ export const featuredProductdata = [
     ],
   },
 
-  // 5. Bedsheet
+  // 5. Duvet
   {
     id: 606,
-    name: "Bedsheet",
+    name: "Black Duvet Set",
     price: "₦120,000",
     star: "⭐⭐⭐⭐",
     img: product6,
